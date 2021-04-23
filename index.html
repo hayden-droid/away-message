@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="https://unpkg.com/98.css">
+  <style>
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .away-message {
+      width: 300px;
+      margin: auto;
+    }
+
+    .away-message .window-body {
+      padding: 6px;
+      margin-top: 4px;
+      margin-bottom: 2px;
+    }
+
+    .label {
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .label select {
+      width: 160px;
+    }
+
+    .message-input label {
+      margin-bottom: 4px;
+    }
+
+    .message-input textarea {
+      margin-top: 0;
+      resize: none;
+    }
+
+    .special-chars td {
+      padding-left: 4px;
+    }
+
+    .special-chars .code {
+      width: 14px;
+    }
+
+    .special-chars .sp {
+      display: inline-block;
+      width: 4px;
+    }
+
+    .bottom-section {
+      position: relative;
+      margin: 8px 0 12px;
+    }
+
+    .later-use {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    .later-use input:focus + label {
+      outline: none;
+    }
+
+    .later-use label[for="save-for-later"] {
+      margin-right: 3px;
+    }
+
+    .submit {
+      justify-content: center;
+    }
+
+    .submit button {
+      width: 86px;
+    }
+
+    .submit .button-gap {
+      width: 8px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="window away-message">
+      <div class="title-bar">
+        <div class="title-bar-text">Edit Away Message</div>
+        <div class="title-bar-controls">
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <section class="field-row label">
+          <label>Enter label:</label>
+          <select>
+            <option>Message Title</option>
+            <option>Gaming</option>
+          </select>
+        </section>
+
+        <section class="field-row-stacked message-input">
+          <label>Enter new Away message:</label>
+          <fieldset class="editing-controls"></fieldset>
+          <textarea rows="4"></textarea>
+        </section>
+
+        <div class="bottom-section">
+          <section class="field-row-stacked">
+            Special Characters:
+            <table class="special-chars">
+              <tr>
+                <td class="code">%n</td>
+                <td>=<span class="sp"></span>Screen name of buddy</td>
+              </tr>
+              <tr>
+                <td class="code">%d</td>
+                <td>=<span class="sp"></span>Current date</td>
+              </tr>
+              <tr>
+                <td class="code">%t</td>
+                <td>=<span class="sp"></span>Current time</td>
+              </tr>
+            </table>
+          </section>
+
+          <section class="field-row later-use">
+            <label for="save-for-later">Save for&nbsp;<u>l</u>ater use</label>
+            <input id="save-for-later" type="checkbox">
+            <label>&nbsp;</label>
+          </section>
+        </div>
+
+        <section class="field-row submit">
+          <button><u>I</u>'m Away</button>
+          <div class="button-gap"></div>
+          <button>Cancel</button>
+        </section>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
